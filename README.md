@@ -10,16 +10,16 @@ A Python script that takes raw data from your save file for KORG M01 Music Works
 Expects either separate tracks from 3DS version with **.m01** extension or a dump of a savefile from DS version with **.sav** extension.
 
 ## How to dump savedata
-**DS version:**
-I can only speculate on this part, unfortunately, but likely you'll have to use a flashcart of some sort or use a soft-modded 3DS.
-**3DS version:**
-KORG M01D Music Workstation for 3DS saves files to this location on the SD card:
-`sd:\\Nintendo 3DS\00000000000000000000000000000000\00000000000000000000000000000000\extdata\00000000\00000F16`
-But you still have to decrypt these yourself.
+**DS version:**<br/>
+I can only speculate on this part, unfortunately, but likely you'll have to use a flashcart of some sort or use a soft-modded 3DS.<br/><br/>
+**3DS version:**<br/>
+KORG M01D Music Workstation for 3DS saves files to this location on the SD card:<br/>
+`sd:\\Nintendo 3DS\00000000000000000000000000000000\00000000000000000000000000000000\extdata\00000000\00000F16`<br/>
+But you still have to decrypt these yourself.<br/><br/>
 
 
-Initially my idea was to just convert it to the format 3DS version expects, then use 3DS version to export MIDIs, but I decided to skip the man in the middle entirely later on (since, let's be honest, even though 3DS version allows to export your song data into MIDI, you still have to then spend time reworking the thing, rearranging the drums, and so on, and so on).
-Since I don't have any programming skills, I decided to try using AI to help me flesh it out, using my notes.
+Initially my idea was to just convert it to the format 3DS version expects, then use 3DS version to export MIDIs, but I decided to skip the man in the middle entirely later on (since, let's be honest, even though 3DS version allows to export your song data into MIDI, you still have to then spend time reworking the thing, rearranging the drums, and so on, and so on).<br/>
+Since I don't have any programming skills, I decided to try using AI to help me flesh it out, using my notes.<br/>
 
-I include my rough notes and original drum mappings in hopes that it could be used to develop a better idea of file structure and possibly make a better script later on.
+I include my rough notes and original drum mappings in hopes that it could be used to develop a better idea of file structure and possibly make a better script later on.<br/>
 _Notes still contain some mistakes and misconceptions, but in general they were enough to make a working script so far_
