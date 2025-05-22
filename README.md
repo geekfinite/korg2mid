@@ -22,3 +22,4 @@ Initially my idea was to just convert it to the format 3DS version expects, then
 Since I don't have any programming skills, I decided to try using AI to help me flesh it out, using my notes.
 
 I include my rough notes and original drum mappings in hopes that it could be used to develop a better idea of file structure and possibly make a better script later on.
+_Notes still contain some mistakes and misconceptions, but in general they were enough to make a working script so far_
