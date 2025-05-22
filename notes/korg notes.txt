@@ -1,0 +1,152 @@
+korg format notes, 3ds:
+
+0x0-0x3 - checksum
+0x4 - version? always 05 on 3ds
+
+mixer:
+each channel takes 56 bytes
+0x0F-0x46 - channel 1
+
+0xF - channel 1 volume
+	64h - default, 7Fh - maximum
+0x10 - channel 1 panning
+	FBh - full left
+	FCh - L9:1R
+	FDh - L8:2R
+	FEh - L7:3R
+	FFh - L6:4R
+	00h - center
+	01h - L4:6R
+	02h - L3:7R
+	03h - L2:8R
+	04h - L1:9R
+	05h - full right
+
+0x11 - channel 1 fx on/off
+	01h - on, 00h - off, 03h - muted, 05h - solo
+0x49 - channel 2 fx on/off
+0x81 - channel 3 fx on/off
+0xB9 - channel 4 fx on/off
+0xF1 - channel 5 fx on/off
+0x129 - channel 6 fx on/off
+0x161 - channel 7 fx on/off
+0x199 - channel 8 fx on/off
+
+settings:
+
+0x1CC - reverb type
+	00h - hall
+	01h - room
+	02h - spring
+0x1CD - reverb time
+	00h min, 7Fh max
+0x1CE - reverb level
+	00h min, 7Fh max
+
+0x1D0 - delay tempo sync
+	00h - on, 01h - off
+0x1D1 - delay time
+	00h to 7Fh
+0x1D2 - delay L/R ratio
+	02h default - +2
+	3Fh - +63
+	C1h - -63
+0x1D3 - delay feedback
+	00h min, 7Fh max
+0x1D4 - delay level
+	00h min, 7Fh max
+
+0x1D8 - scene lock, fx ?
+	95h (?) locked, 91h no lock (?)
+	91h - reverb, 90h - delay
+
+0x200-0x203 - song length in bytes, little endian
+
+0x212 - tempo
+
+0x214 - swing
+	range from 32h to 4Bh
+
+0x215 - master step
+
+channels:
+
+0x8-0xE - instrument data
+
+0x8 - instrument bank
+	00h - M1
+	01h - 01/W
+	02h - EX
+0x9 - instrument type
+	00h - keyboard
+	01h - guitar/mallet
+	02h - bass
+	03h - strings/pad
+	04h - brass/reed
+	05h - lead synth
+	06h - poly synth
+	07h - se/other
+	08h - hit/chord
+	09h - drums
+
+0xA - instrument
+	00h min, 0Fh max, depends on the bank
+0xD - attack, min 00h, max 0Fh
+0xE - release, min 00h, max 0Fh
+
+0x17 - drum kit Kick1 level, Fh max
+0x18 - drum kit Kick1 pitch, Fh max, 
+0x1F - drum kit Kick1 pan (?), 3Ch - -5
+
+drum kits have 12 notes
+
+
+0x220-0x224 - ???
+
+
+02 00 06 00 00 00 02 7F 00 01
+bank
+instrument type
+instrument ID
+null
+null
+attack
+release
+volume
+panning
+effect on/off
+
+
+
+
+
+pattern data:
+
+0x21C-0x21F, 0x224-0x530 - individual settings for each pattern
+	four bytes for one pattern
+
+	40 00 20 00
+	^     ^
+	|     |
+	|     ^ amount of steps in specific pattern
+	^ tempo in specific pattern   
+
+
+62 00 01 00   03 0C 8C 00   05 01 08 00 
+^  ^  ^  ^    ^  ^  ^  ^    ^  ^  ^  ^
+|  |  |  |    |  |  |  |    |  |  |  null terminator
+|  |  |  |    |  |  |  |    |  |  ^ ??? changes
+|  |  |  |    |  |  |  |    |  ^ ???
+|  |  |  |    |  |  |  |    ^  ???
+|  |  |  |    |  |  |  ^ note position, tick number on the pattern
+|  |  |  |    |  |  ^ note, 8Ch = C0, F0h = E8, F0h max
+|  |  |  |    |  ^ note velocity
+|  |  |  |    ^ note length in "Gate" ticks
+|  |  |  |
+|  |  |  ^ null terminator
+|  |  ^ amount of notes in the pattern
+|  ^  channel number, 00h min, 07h max
+^ pattern number, 00h min, 62h max
+
+
+00 00 00 00   05 01 08 00   00 00 01 00 03 0C B0 00 05 01 04 00

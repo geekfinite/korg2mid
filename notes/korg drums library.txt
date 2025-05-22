@@ -1,0 +1,483 @@
+Notes to map for a drum channel:
+
+Data is presented in the following form:
+- first byte is instrument bank;
+- second byte is instrument type;
+- third byte is instrument ID in the bank;
+- fourth byte is null terminator.
+
+M1 DrumKit1 - 00 09 00 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Cowbell
+A#4 - Crash
+B4 - Ride 
+
+M1 DrumKit2 - 00 09 01 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - CongaLow
+A4 - CongaHigh
+A#4 - Crash
+B4 - Ride 
+
+M1 DrumKit3 - 00 09 02 00:
+C4 - Kick
+C#4 - Rim
+D4 - Snare
+D#4 - Clap
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - Shaker
+A4 - Tambourine
+A#4 - Crash
+B4 - Splash 
+
+M1 PercKit - 00 09 03 00:
+C4 - CongaLow
+C#4 - CongaHigh
+D4 - TimbalLow
+D#4 - TimbalHigh
+E4 - Drop
+F4 - Finger
+F#4 - Click1
+G4 - Click2
+G#4 - Rap
+A4 - Whip
+A#4 - Windbell
+B4 - Ring 
+
+M1 NoiseKit - 00 09 04 00:
+C4 - Thumb
+C#4 - Pick
+D4 - Finger
+D#4 - Hammer
+E4 - Breath
+F4 - Pop
+F#4 - VibHit
+G4 - Pluck
+G#4 - Block
+A4 - Drop
+A#4 - Metal
+B4 - Distortion
+
+01/W TotalKit - 01 09 00 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - CongaLow
+A4 - CongaHigh
+A#4 - Crash
+B4 - Ride
+
+01/W RockKit - 01 09 01 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Cowbell
+A#4 - Crash
+B4 - Ride 
+
+01/W DanceKit - 01 09 02 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Industrial
+A#4 - Crash
+B4 - ReverseSnareDrum 
+
+01/W AnalogKit - 01 09 03 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare
+D#4 - Clap
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - Rim
+A4 - Claves
+A#4 - Zap1
+B4 - Zap2
+
+01/W HipHopKit - 01 09 04 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare
+D#4 - Snare2
+E4 - HighHatClosed1
+F4 - HighHatClosed2
+F#4 - Scratch1
+G4 - Scratch2
+G#4 - Scratch3
+A4 - Fist
+A#4 - OrchestraHit
+B4 - Stadium
+
+01/W R&BKit - 01 09 05 00:
+C4 - Kick
+C#4 - Rim
+D4 - Snare
+D#4 - Clap
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - Finger
+G4 - Tambourine
+G#4 - TriangleClosed
+A4 - TriangleOpen
+A#4 - Thing
+B4 - BellTr
+
+01/W BD&SDKit1 - 01 09 06 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Kick3
+D#4 - Kick4
+E4 - Snare1
+F4 - Snare2
+F#4 - Snare3
+G4 - Snare4
+G#4 - Snare5
+A4 - Snare6
+A#4 - RollingSnareDrum1
+B4 - RollingSnareDrum2
+
+01/W BD&SDKit2 - 01 09 07 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Kick3
+D#4 - Zap
+E4 - Clap
+F4 - Snare1
+F#4 - Snare2
+G4 - Snare3
+G#4 - Snare4
+A4 - Snare5
+A#4 - Snare6
+B4 - ReverseSnareDrum
+
+01/W TomKit - 01 09 08 00:
+C4 - Tom1Low
+C#4 - Tom1MediumLow
+D4 - Tom1MediumHigh
+D#4 - Tom1High
+E4 - Tom2Low
+F4 - Tom2MediumLow
+F#4 - Tom2MediumHigh
+G4 - Tom2High
+G#4 - Tom3Low
+A4 - Tom3MediumLow
+A#4 - Tom3MediumHigh
+B4 - Tom3High
+
+01/W CymbalKit - 01 09 09 00:
+C4 - HighHat1Shut
+C#4 - HighHat1Closed
+D4 - HighHat1Pd
+D#4 - HighHat1Open
+E4 - HighHat2Closed
+F4 - HighHat2Open
+F#4 - Crash
+G4 - Splash
+G#4 - Ride1
+A4 - Ride2
+A#4 - OrchestraCymbal
+B4 - Gong
+
+01/W PercKit1 - 01 09 0A 00:
+C4 - Conga1
+C#4 - Conga2
+D4 - Conga3
+D#4 - Conga4
+E4 - Shaker1
+F4 - Shaker2
+F#4 - Bongo1
+G4 - Bongo2
+G#4 - Bongo3
+A4 - Claves
+A#4 - Splash
+B4 - Windbell
+
+01/W PercKit2 - 01 09 0B 00:
+C4 - Timbal1
+C#4 - Timbal2
+D4 - Timbal3
+D#4 - Cowbell
+E4 - Cabas1
+F4 - Cabas2
+F#4 - QuicaLow
+G4 - QuicaHigh
+G#4 - AgogoLow
+A4 - AgogoHigh
+A#4 - Whistle1
+B4 - Whistle2
+
+01/W SEKit - 01 09 0C 00:
+C4 - Gong
+C#4 - YoVox
+D4 - Clicker
+D#4 - Phone
+E4 - Scratch1
+F4 - Scratch2
+F#4 - TronUp
+G4 - Alia
+G#4 - Thing
+A4 - Thunder
+A#4 - Cricket
+B4 - Stadium
+
+EX DDD1Kit - 02 09 00 00:
+C4 - Kick
+C#4 - Rim
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Cowbell
+A#4 - Crash
+B4 - Ride 
+
+EX DDD110Kit - 02 09 01 00:
+C4 - Kick
+C#4 - Rim
+D4 - Snare
+D#4 - Clap
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - CongaLow
+A4 - CongaHigh
+A#4 - Crash
+B4 - Tambourine
+
+EX S3Kit - 02 09 02 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Rim
+A#4 - Crash
+B4 - Ride 
+
+EX LynKit - 02 09 03 00:
+C4 - Kick
+C#4 - Rim
+D4 - Snare
+D#4 - Clap
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - CongaLow
+A4 - CongaHigh
+A#4 - Crash
+B4 - Ride
+
+EX StandardKit - 02 09 04 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Clap
+A#4 - Crash
+B4 - Ride 
+
+EX HouseKit - 02 09 05 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - Conga1
+G4 - Conga2
+G#4 - Conga3
+A4 - Clap
+A#4 - Crash
+B4 - ReverseCymbal 
+
+EX StandardKit - 02 09 06 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomMedium
+G#4 - TomHigh
+A4 - Clap
+A#4 - Crash
+B4 - ReverseCymbal 
+
+EX MinimalKit - 02 09 07 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - BlockLow
+G4 - BlockHigh
+G#4 - Click
+A4 - Clap
+A#4 - ReverseZap
+B4 - Roll 
+
+EX TronicaKit - 02 09 08 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Glitch1
+D#4 - Glitch2
+E4 - Bleep1
+F4 - Bleep2
+F#4 - Click1
+G4 - Click2
+G#4 - Grain
+A4 - Spectrum
+A#4 - Noise
+B4 - Drop
+
+EX D&BKit - 02 09 09 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - Vox+BassDrum
+G4 - Vox+SnareDrum
+G#4 - Rim
+A4 - Block
+A#4 - Tambourine
+B4 - Ride
+
+EX R&BKit - 02 09 0A 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - Clap1
+A4 - Clap2
+A#4 - Crash
+B4 - WindChime
+
+EX HipHopKit - 02 09 0B 00:
+C4 - Kick1
+C#4 - Kick2
+D4 - Snare1
+D#4 - Snare2
+E4 - HighHatClosed
+F4 - HighHatOpen
+F#4 - TomLow
+G4 - TomHigh
+G#4 - Cowbell
+A4 - Clap
+A#4 - Scratch
+B4 - Ride
+
+EX EthnicKit - 02 09 0C 00:
+C4 - Cajon1
+C#4 - Udu1
+D4 - Cajon2
+D#4 - Udu2
+E4 - Shaker1
+F4 - Shaker2
+F#4 - Djemb1
+G4 - Djemb2
+G#4 - Djemb3
+A4 - Tabla1
+A#4 - Tabla2
+B4 - Tabla3
+
+EX SEKit - 02 09 0D 00:
+C4 - Explosion
+C#4 - Bird
+D4 - Baby
+D#4 - Dog
+E4 - Glass
+F4 - Phone
+F#4 - Wind
+G4 - Door
+G#4 - MachineGun
+A4 - Helicopter
+A#4 - Siren
+B4 - ChurchBell
+
+EX CartoonKit - 02 09 0E 00:
+C4 - JewHp1
+C#4 - JewHp1
+D4 - Quica
+D#4 - Tp-Wah
+E4 - Whistle1
+F4 - Whistle2
+F#4 - Toy1
+G4 - Toy2
+G#4 - Flexa1
+A4 - Flexa2
+A#4 - Flexa3
+B4 - Xiaolo
+
+EX GuitarElement - 02 09 0F 00:
+C4 - Glissando1
+C#4 - Glissando2
+D4 - Mute1
+D#4 - Mute2
+E4 - Mute3
+F4 - Strum1
+F#4 - Strum2
+G4 - Strum3
+G#4 - Strum4
+A4 - Glissando3
+A#4 - Glissando4
+B4 - Fret
