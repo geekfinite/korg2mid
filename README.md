@@ -3,7 +3,8 @@ _I'm not a programmer, code is written by DeepSeek R1, Qwen and ChatGPT - I only
 
 ![Screenshot](/readme-assets/korg.png)
 
-**Requires MIDIUtil library to work**
+**Requires MIDIUtil library to work**<br/>
+`pip install MIDIUtil`<br/><br/>
 
 If you ever wanted to preserve songs you made on your DS/3DS in Korg M01 or even improve them in an external DAW, here's a solution!
 A Python script that takes raw data from your save file for KORG M01 Music Workstation and converts it to MIDI.
